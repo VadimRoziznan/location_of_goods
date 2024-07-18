@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.view_list {
+  width: 42px;
+  height: 40px;
+  margin: 25px;
+  background-image: url('../../../public/view_list_50dp_000000.svg');
+  background-repeat: no-repeat;
+
+}
+
+.view_module {
+  width: 42px;
+  height: 40px;
+  margin: 25px;
+  background-image: url('../../../public/view_module_50dp_000000.svg');
+  background-repeat: no-repeat;
+
+}
