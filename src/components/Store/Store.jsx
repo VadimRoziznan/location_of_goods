@@ -1,24 +1,11 @@
 import React from 'react'
-import styles from './store.module.css'
 import { IconSwitch } from '../IconSwitch';
 import { useState } from 'react';
 import { ListView } from '../ListView';
 import { CardsView } from '../CardsView';
 
+
 export const Store = () => {
-
-  const state = {viveName: 'view_module'};
-
-  const [view, setView] = useState(state);
-
-  const handleChangeView = () => {
-    if (view.viveName === 'view_module') {
-      setView({viveName: 'view_list'})
-    } else {
-      setView({viveName: 'view_module'})
-    }
-  }
-
   const products = [{
     name: "Nike Metcon 2",
     price: "130",
@@ -50,6 +37,11 @@ export const Store = () => {
     color: "green",
     img: "https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/events-state/layouts/img/5.jpg"
   }];
+  const state = {viveName: 'view_module'};
+  const [view, setView] = useState(state);
+  const handleChangeView = () => {
+    setView({viveName: view.viveName === 'view_module' ? 'view_list' : 'view_module'});
+  }
   return (
     <React.Fragment>
     <IconSwitch icon={view.viveName} onSwitch={() => handleChangeView()}/>
